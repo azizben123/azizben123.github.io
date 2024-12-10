@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben Nhila Groupe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script src="javaScript.js"></script>
+</head>
+<body onload="swipperjs()">
+<header>
+    <div class="header-banner-background">
+        <div class="header-banner container">
+            <div class="header-icons">
+                <div class="icons">
+                    <a href="https://www.facebook.com/societebennhila.plus.9" target="_blank">
+                    <i class="fa-brands fa-facebook fa-xl icon"></i></a>
+                    <a href=""></a><i class="fa-brands fa-instagram fa-xl icon"></i>
+                    <i class="fa-brands fa-whatsapp fa-xl icon"></i>
+                 </div>
+            </div>
+            <p class="text-welcome"><strong>Bienvenue sur notre site</strong></p>
+            <div class="local">
+                <a href=""><i class="fa-solid fa-location-dot fa-xl icon"></i><span>Notre localisation</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+    <div class="header-bloc2">
+        <div class="logo"><div class="menu-container">
+            <button class="menu-button" id="menu-button1" onclick="menu('0')"><i class="fa-solid fa-bars"></i></button>
+            <ul class="menu-links" id="menu-links">
+                <li onclick="menu('1')"><a href="#" class="links-Parent">les Portes</a></li>
+                <li class="menu-links1"><a href="#" class="links-Fils">Portes en Bois</a></li>
+                <li class="menu-links1"><a href="#" class="links-Fils">Portes en Aluminuim</a></li>
+                <li class="menu-links1"><a href="#" class="links-Fils">Portes en Fer</a></li>
+                <li onclick="menu('2')"><a href="#" class="links-Parent">Grés</a></li>
+                <li class="menu-links2"><a href="#" class="links-Fils">Grés Sol</a></li>
+                <li class="menu-links2"><a href="#" class="links-Fils">Grés Mur</a></li>
+                <li onclick="menu('3')"><a href="#" class="links-Parent">Ceramique</a></li>
+                <li class="menu-links3"><a href="#" class="links-Fils">Ceramique Sol</a></li>
+                <li class="menu-links3"><a href="#" class="links-Fils">Ceramique Mur</a></li>
+
+            </ul>
+        </div>
+        <img src="images/logo.png" height="80px" width="80px" ></div>
+        <div class="searchBar-container">
+            <div class="aligner">
+                <input type="text" class="searchStyle1" placeholder="veuillez saisir un mot clé">
+                <div class="searchStyle2"><i class="fa-solid fa-magnifying-glass icon-search"></i></div> 
+            </div>
+        </div>
+        <div class="container-connexion">
+            <a href="formulaire de connexion/index.html" onclick="farouma()" target="main"><div class="aligner-connexion"><i class="fa-solid fa-user icon-connexion"></i><span class="text-connexion">connexion</span></div></a>
+        </div>
+        <div class="photo-header">
+            <div class="swiper swiper1">
+                <div class="card-wrapper1">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/image1.png" alt=""></div>
+                    <div class="swiper-slide"><img src="images/image2.webp" alt=""></div>
+                  </div>
+                </div>
+                <div class="swiper-pagination swiper-pagination1"></div>
+                <div class="boutton-swipper1-prev swiper-button-prev"></div>
+                <div class="boutton-swipper1-next swiper-button-next"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+</header>
+<iframe src="accueil.html" name="main" id="main" frameborder="0" height="950spx" width="100%" style="background-color: #f9f9f9;"></iframe>
+<footer>
+    <div class="icons2">
+        <a href="https://www.facebook.com/societebennhila.plus.9" target="_blank">
+        <i class="fa-brands fa-facebook fa-xl icon2"></i></a>
+        <a href=""></a><i class="fa-brands fa-instagram fa-xl icon2"></i>
+        <i class="fa-brands fa-whatsapp fa-xl icon2"></i>
+     </div>
+    <div class="container">
+        <img src="images/logo.png" alt="" height="100px" width="100px">
+        <div class="information">
+            <p><span>Adress Depot:</span> Rue Bir Tayeb Jemmel</p>
+            <p><span>Tel:</span>98307772/98953975</p>
+            <p><span>Email:</span>stebennhilaplus@hotmail.com</p>
+        </div> 
+        <div class="localisation">
+            <p style="color: #d4ac0d;">Nos local</p>
+            <p style="padding-left: 20px;color:#333;"><span style="color: #d4ac0d;">Jemmel</span> : Rue Bir Tayeb</p>
+            <p style="padding-left: 20px;color:#333;"><span  style="color: #d4ac0d;">Kairouan</span> : Quartier Mohamed Ali </p>
+            <p style="padding-left: 20px;color:#333;"><span  style="color: #d4ac0d;">Sfax</span> : Rue Gabes km5</p>
+        </div>
+        
+    </div>
+</footer>
+</body>
+</html>
