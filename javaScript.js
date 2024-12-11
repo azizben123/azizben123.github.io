@@ -1,3 +1,6 @@
+function openInIframe(){
+  document.getElementById("iframe2").src = "http://localhost/site societe/les fichiers php/page.php";
+}
 function farouma(){
   var box = document.getElementById('main');
   box.scrollIntoView({ behavior: 'smooth' });
