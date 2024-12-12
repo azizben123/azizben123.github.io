@@ -1,11 +1,10 @@
-@import url('../style.css'); 
-
-.containerback1{
-    display: flex;
-    justify-content: space-between;
-    
-
+.card{
+    user-select: none;
 }
-
-
-
+.containerback{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 90%;
+    margin: 0 5% 50px 5%;
+    gap: 30px;
+}

@@ -1,3 +1,4 @@
+<?php require("connection.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,30 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
+    
+
 </head>
 <body>
 <?php
-$host = 'localhost';
-$username = 'root';  
-$password = '';      
-$dbname = 'societe'; 
-$conn = new mysqli($host, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("La connexion a échoué : " . $conn->connect_error);
-}
-?>
-<?php $sql = "SELECT * FROM article";
+    $value = $_GET['value'].'%';
+    $sql = "SELECT * FROM article where Reference like '$value'";
         $result = $conn->query($sql);
         $nb_ligne= $result->num_rows;
- echo "<div class='bande'><p>les Portes</p></div>";?>
+        echo "<div class='bande'><p>les Portes</p></div>";?>
 <?php
-    $d_flex=1;
-    $k=(int)($nb_ligne/3);
-    for  ($j = 0; $j <= $k; $j++){
-        if($j==$k && ($nb_ligne%3)!=0){$colonne=$nb_ligne%3;$d_flex='containerback2';}
-        else{$colonne=3;$d_flex='containerback1';}
-        echo "<div class='$d_flex'>";
-             for ($i = 0; $i < $colonne; $i++){
+        echo "<div class='containerback'>";
+             for ($i = 0; $i < $nb_ligne; $i++){
                 $row = $result->fetch_assoc();
                 echo ("
                 <div class='card'>
@@ -40,14 +31,14 @@ if ($conn->connect_error) {
                     <p>".$row['nom']."</p>
                 </div>
                 <div class='price'>
-                    <p>".$row['Prix']." dt</p>
+                    <p>".$row['Prix']." DT</p>
                 </div>
                 <button>Commander</button>
                 </div>
             </div>");
     }
     echo "</div>";
-}
+
 ?>
 
 </body>

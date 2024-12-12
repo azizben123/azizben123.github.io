@@ -90,6 +90,12 @@ table{
     margin-left: 20px;
     font-size: large;
   }
+  a{
+    color: #f1c40f;
+  }
+  .linkPass{
+    margin-top: 15px;
+  }
   @media (max-width:880px){
     .container{
         width: 80%;
@@ -116,7 +122,8 @@ table{
     }
     a{
         margin-left: 10px;
-        font-size: small;   
+        font-size: small; 
+        color: #f1c40f;  
     }
     .button-container{
         margin-top: 50px;
@@ -134,6 +141,10 @@ table{
         margin-left: 5px;
         font-size: small;
       }
+      .input input{
+        height: 30px;
+       
+    }
   }
   
     

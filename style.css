@@ -370,8 +370,15 @@ footer .container .information p {
   color: #d4ac0d;
 
 }
+.iframe1{
+  width: 100%;
+  height: 1000px;
+}
 
-
+.iframe2{
+  width: 100%;
+  height: 550px;
+}
 @media  (max-width:500px){
       .container { 
           max-width: 480px;
@@ -503,9 +510,15 @@ footer .container .information p {
         justify-content: space-around;
         
       }
-      iframe{
-        height: 550px;
+      .iframe1{
+        height: 600px;
 
+      }
+      .iframe2{
+        width: 100%;
+        height: 420px;
+      
+      
       }
                
 }

@@ -14,9 +14,9 @@
 <main class="container main-container">
 <aside>
     <button class="button-Pere">Les Portes</button>
-    <button class="button-fils" onclick="openInIframe()">Portes en Aluminuim</button>
-    <button class="button-fils">Portes en Bois</button>
-    <button class="button-fils">Portes en Fer</button>
+    <a href="http://localhost/site societe/les fichiers php/page.php?value=PorteTurc" target="_blank"><button class="button-fils">Portes blindés</button></a>
+    <a href="http://localhost/site societe/les fichiers php/page.php?value=PorteBois" target="_blank"><button class="button-fils">Portes en Bois</button></a>
+    <a href="http://localhost/site societe/les fichiers php/page.php?value=PorteFer" target="_blank"><button class="button-fils">Portes en Fer</button></a>
     <button class="button-Pere">Grés</button>
     <button class="button-fils">Grés Sol</button>
     <button class="button-fils">Grés Mur</button>
@@ -25,10 +25,86 @@
     <button class="button-fils">Ceramique Mur</button>
 </aside>
 <article>
-    <iframe src="ArticlePlusDemander.html" frameborder="0" height="550px" width="100%" id="iframe2">
-
-    </iframe>
-    
+  <div class="bande"><p>Les articles les plus demandés</p></div>
+    <div class="swiper swiper2">
+        <div class="card-wrapper"> 
+            <div class="swiper-wrapper">
+                <div class="card swiper-slide">
+                    <div class="image-container">
+                    <img src="images/PorteBois0001.png" alt="">
+                    </div>
+                    <div class="information">
+                    <div class="card-title">
+                        <p>Porte Frene 220*90</p>
+                    </div>
+                    <div class="price">
+                        <p>390.000 dt </p>
+                    </div>
+                    <button>Commander</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-container">
+                    <img src="images/PorteBois0001.png" alt="">
+                    </div>
+                    <div class="information">
+                    <div class="card-title">
+                        <p>Porte Frene 220*90</p>
+                    </div>
+                    <div class="price">
+                        <p>390.000 dt </p>
+                    </div>
+                    <button>Commander</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-container">
+                    <img src="images/PorteBois0001.png" alt="">
+                    </div>
+                    <div class="information">
+                        <div class="card-title">
+                            <p>Porte Frene 220*90</p>
+                        </div>
+                        <div class="price">
+                            <p>390.000 dt </p>
+                        </div>
+                        <button>Commander</button>
+                    </div>
+                </div>   
+                <div class="card swiper-slide">
+                    <div class="image-container">
+                    <img src="images/PorteBois0001.png" alt="">
+                    </div>
+                    <div class="information">
+                        <div class="card-title">
+                            <p>Porte Frene 220*90</p>
+                        </div>
+                        <div class="price">
+                            <p>390.000 dt </p>
+                        </div>
+                        <button>Commander</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                <div class="image-container">
+                <img src="images/PorteBois0001.png" alt="">
+                </div>
+                <div class="information">
+                    <div class="card-title">
+                        <p>Porte Frene 220*90</p>
+                    </div>
+                    <div class="price">
+                        <p>390.000 dt </p>
+                    </div>
+                    <button>Commander</button>
+                </div>
+                </div>
+            </div>
+    </div>
+        <div class="swiper-pagination swiper-pagination2"></div>
+        <div class="boutton-swipper2-prev swiper-button-prev"></div>
+        <div class="boutton-swipper2-next swiper-button-next"></div>
+    </div>
     <div class="bande"><p>Nos marques</p></div>
         <div class="partenaires">
         <img src="images/partenaire1.png" alt="">
@@ -36,7 +112,6 @@
         <img src="images/partenaire3.png" alt="">
         <img src="images/partenaire4.png" alt="">
         </div>
-    
 </article>
 </main> 
 </body>
