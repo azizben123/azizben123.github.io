@@ -43,15 +43,12 @@ table{
 .input input{
     width: 90%;
     height: 45px;
-    border-radius: 8px;
+    border-width: 0;
     padding-left: 10px;
     font-size: 15px;
-    border: 1px solid #f1c40f;
+    border-bottom: 1px solid #f1c40f;
     transition: box-shadow 0.3s ease;
 }
-.input input:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
 .input input:focus{
     outline: none;
 }
