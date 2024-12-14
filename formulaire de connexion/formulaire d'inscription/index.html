@@ -8,24 +8,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <script src="..\javaScript.js"></script>
 </head>
 <body>
     <a href="C:\xampp\htdocs\site societe\index.html" target="_parent" class="lienDeRetour"><p><span><i class="fa-solid fa-angle-left"></i></span>Retour au accueil</p></a>
     <div class="bande"><p>Créez votre compte</p></div>
+    <form onsubmit="return validerFormulaireInscription()" action="http://localhost/site societe/les fichiers php/inscription.php" method="post">
     <div style="display: grid;place-items: center;">
         <div class="container">
-            <table>
+            <table class="table1">
+    
                 <tr>
                     <td class="label"><p>Nom</p></td>
-                    <td class="input"><input type="text"></td>
+                    <td class="input" ><input type="text" id="nom" oninput="couleurBordure('nom')"></td>
                     <td class="label"><p>Prenom</p></td>
-                    <td class="input"><input type="text"></td>
+                    <td class="input"><input type="text" id="prenom" oninput="couleurBordure('prenom')"></td>
                 </tr>
                 <tr>
                     <td class="label"><p>Mobile</p></td>
-                    <td class="input"><input type="text"></td>
+                    <td class="input"><input type="text" id="numTel" oninput="couleurBordure('numTel')"></td>
                     <td class="label"><p>Email</p></td>
-                    <td class="input"><input type="email"></td>
+                    <td class="input"><input type="email" id="email" name="email" oninput="couleurBordure('email')"></td>
                 </tr>
             </table>
             <div class="button-container">
@@ -33,6 +36,7 @@
             </div>
         </div>
     </div>
+</form>
     
 </body>
 </html>

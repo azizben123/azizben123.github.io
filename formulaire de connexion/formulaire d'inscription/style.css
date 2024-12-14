@@ -18,7 +18,7 @@ body{
     display: grid;
     place-items: center;
   }
-  table{
+  .table1{
     width: 100%;
   }
   .bande p{
@@ -34,15 +34,13 @@ body{
   .input input{
     width: 70%;
     height: 45px;
-    border-radius: 8px;
+    border-width: 0;
     padding-left: 10px;
     font-size: 15px;
-    border: 1px solid #f1c40f;
+    border-bottom: 1px solid #f1c40f;
     transition: box-shadow 0.3s ease;
   }
-  .input input:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
+
   .input input:focus{
     outline: none;
     
@@ -84,6 +82,42 @@ body{
     margin-left: 20px;
     font-size: large;
   }
+  .table2{
+    width: 100%; 
+  }
+
+  .label2{
+      width: 40%;
+      height: 100px;
+      
+  }
+  .label2 p{
+      font-size: large;
+      font-weight: 600;
+      padding-left: 50px;
+  }
+  .input2{
+      width: 60%;
+  }
+  .input2 input{
+      width: 90%;
+      height: 45px;
+      border-width: 0;
+      padding-left: 10px;
+      font-size: 15px;
+      border-bottom: 1px solid #f1c40f;
+      transition: box-shadow 0.3s ease;
+  }
+  .input2 input:focus{
+      outline: none;
+  }
+  .message{
+    text-align: center;
+    font-weight: 700;
+    font-size: large;
+    color: red;
+  }
+  
   @media (max-width:1000px){
     .container{
         width: 90%;
@@ -112,7 +146,7 @@ body{
         font-size: medium;
         font-weight: bold;
       }
-    .label p{
+    .label p,.label2 p{
         font-size: small;
         font-weight: 600;
         padding-left: 10px;
