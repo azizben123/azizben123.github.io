@@ -8,3 +8,28 @@
     margin: 0 5% 50px 5%;
     gap: 30px;
 }
+@media (max-width:994px){
+    .containerback{
+        grid-template-columns: repeat(3,1fr);
+
+    }
+}
+@media (max-width:700px){
+    .containerback{ 
+        grid-template-columns: repeat(2,1fr);
+
+    }
+}
+@media (max-width:500px){
+    .containerback{
+       display: flex;
+       flex-direction: column;
+       gap: 10px;
+       align-items: center;
+    }
+    .card{
+        width: 70%;
+    }
+
+}
+

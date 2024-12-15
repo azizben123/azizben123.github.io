@@ -42,7 +42,7 @@ $conn->close();
       crossorigin="anonymous" referrerpolicy="no-referrer" />
       <script src="..\formulaire de connexion\javaScript.js"></script>
       <?php if ($s==1): ?>
-         <script>window.open('DashBoard.php', '_blank');</script>
+         <script>window.open('http://localhost/site societe/les fichiers php/DashBoard.php', '_blank');</script>
       <?php endif; ?> 
       <?php 
         $messageStyle = ($x==1) ? 'color:green;' : 'color:red;';
