@@ -1,25 +1,35 @@
 <?php
 require("connection.php");
-$email = $_GET['email'];
-$nom = $_GET['nom'];
-$prenom = $_GET['prenom'];
-$numTel = $_GET['numTel'];
-$password = $_POST['password1'];
-$hashed_password = password_hash($password, PASSWORD_DEFAULT);
-$sql = "INSERT INTO utilisateurs (email,numTel,nom,prenom,password) VALUES (?, ?, ?, ?, ?)";
+if (empty($_POST['email']) || empty($_POST['password'])) {
+    die("L'email et le mot de passe sont obligatoires.");
+}
+$email = $_POST['email'];
+$password = $_POST['password'];
+$sql = "SELECT * FROM utilisateurs WHERE email = ?";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("sssss", $email, $numTel,$nom,$prenom,$hashed_password);
-if ($stmt->execute()) {
-    $message="Compte créé avec succès.";
-    $x=1;
+$stmt->bind_param("s", $email);
+$stmt->execute();
+$result = $stmt->get_result();
+$s=0;
+if ($result->num_rows > 0) {
+    $user = $result->fetch_assoc();
+    if (password_verify($password,$user['password'])) {
+        $message = "Votre compte est ouvert.";
+        $x = 1;
+        if ($user['status'] == 'Admin' || $user['status'] == 'Développer') {
+            $s = 1;
+        }
+    } else {
+        $message = "Mot de passe incorrect.";
+        $x = 2;
+    }
 } else {
-    $message="Erreur lors de la création du compte : ";
-    $x=2;
+    $message = "Ce compte n'existe pas.";
+    $x = 2;
 }
 $stmt->close();
 $conn->close();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,19 +40,21 @@ $conn->close();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <script src="..\javaScript.js"></script>
+      <script src="..\formulaire de connexion\javaScript.js"></script>
+      <?php if ($s==1): ?>
+         <script>window.open('DashBoard.php', '_blank');</script>
+      <?php endif; ?> 
       <?php 
-        $messageStyle = $x==1 ? 'color:green;' : 'color:red;';
+        $messageStyle = ($x==1) ? 'color:green;' : 'color:red;';
        ?>
-    
 </head>
 <body>
     <a href="C:\xampp\htdocs\site societe\index.html" target="_parent" class="lienDeRetour"><p><span><i class="fa-solid fa-angle-left"></i></span>Retour au accueil</p></a>
     <div style="display: grid;place-items: center;">
         <div class="bande"><p>Connectez-vous à votre compte</p></div>
         <div class="container">
-        <p class="message"><?php echo $message; ?></p>
-        <form onsubmit="return validerFormulaireConnection()" action="http://localhost/site societe/les fichiers php/compte.php" method="post">
+        <p class="message" style="<?php echo $messageStyle ?>"><?php echo $message; ?></p>
+        <form onsubmit="return validerFormulaireConnection()" action="http://localhost/site societe/les fichiers php/compte.php"  method="post">
             <table>
                 <tr>
                     <td class="label"><p>Email</p></td>

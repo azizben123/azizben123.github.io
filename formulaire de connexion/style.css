@@ -92,6 +92,12 @@ table{
   .linkPass{
     margin-top: 15px;
   }
+  .message{
+    text-align: center;
+    font-weight: 700;
+    font-size: large;
+    color: green;
+  }
   @media (max-width:880px){
     .container{
         width: 80%;

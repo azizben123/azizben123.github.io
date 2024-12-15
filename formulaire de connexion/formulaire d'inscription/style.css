@@ -129,6 +129,7 @@ body{
         }
         .input input{
             height: 25px;
+            padding-left: 2px;
         }
 
   }
@@ -174,6 +175,7 @@ body{
       .input input{
         height: 20px;
         width: 85%;
+        padding-left: 2px;
         font-size: x-small;
     }
   }

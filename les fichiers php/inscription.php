@@ -53,13 +53,13 @@ if ($result->num_rows > 0) {
             <table class="table1">
                 <tr>
                     <td class="label"><p>Nom</p></td>
-                    <td class="input" ><input type="text" id="nom" oninput="couleurBordure('nom')"></td>
+                    <td class="input" ><input type="text" id="nom" name="nom" oninput="couleurBordure('nom')"></td>
                     <td class="label"><p>Prenom</p></td>
-                    <td class="input"><input type="text" id="prenom" oninput="couleurBordure('prenom')"></td>
+                    <td class="input"><input type="text" id="prenom" name="prenom" oninput="couleurBordure('prenom')"></td>
                 </tr>
                 <tr>
                     <td class="label"><p>Mobile</p></td>
-                    <td class="input"><input type="text" id="NumTel" oninput="couleurBordure('numTel')"></td>
+                    <td class="input"><input type="text" id="NumTel" name="numTel" oninput="couleurBordure('numTel')"></td>
                     <td class="label"><p>Email</p></td>
                     <td class="input"><input type="email" id="email" name="email" oninput="couleurBordure('email')"></td>
                 </tr>
@@ -69,16 +69,18 @@ if ($result->num_rows > 0) {
             </div>
         </div>
         </form>
-        <form onsubmit="return validerFormulaireMotDePasse()" action="http://localhost/site societe/les fichiers php/validationInscrit.php" method="post">
+        <form onsubmit="return validerFormulaireMotDePasse()" 
+        action="http://localhost/site societe/les fichiers php/validationInscrit.php?email=<?php echo $_POST['email'];?>&nom=<?php echo $_POST['nom'];?>&prenom=<?php echo $_POST['prenom'];?>&numTel=<?php echo $_POST['numTel'];?>"
+         method="post">
            <div class="table2">
             <table class="table2">
                 <tr>
                     <td class="label2"><p>Mot de passe</td>
-                    <td class="input2"><input type="password" name="password" id="password1" oninput="couleurBordure('password1')"></td>
+                    <td class="input2"><input type="password" name="password1" id="password1" oninput="couleurBordure('password1')"></td>
                 </tr>
                 <tr>
                     <td class="label2"><p>Confirmer le mot de passe </p></td>
-                    <td class="input2"><input type="password" id="password2" oninput="couleurBordure('password2')"></td>
+                    <td class="input2"><input type="password" name="password2" id="password2" oninput="couleurBordure('password2')"></td>
                 </tr>
            </table>
            <div class="button-container">

@@ -20,19 +20,19 @@
     
                 <tr>
                     <td class="label"><p>Nom</p></td>
-                    <td class="input" ><input type="text" id="nom" oninput="couleurBordure('nom')"></td>
+                    <td class="input" ><input type="text" id="nom" name="nom" oninput="couleurBordure('nom')"></td>
                     <td class="label"><p>Prenom</p></td>
-                    <td class="input"><input type="text" id="prenom" oninput="couleurBordure('prenom')"></td>
+                    <td class="input"><input type="text" id="prenom" name="prenom" oninput="couleurBordure('prenom')"></td>
                 </tr>
                 <tr>
                     <td class="label"><p>Mobile</p></td>
-                    <td class="input"><input type="text" id="numTel" oninput="couleurBordure('numTel')"></td>
+                    <td class="input"><input type="text" id="numTel" name="numTel" oninput="couleurBordure('numTel')"></td>
                     <td class="label"><p>Email</p></td>
                     <td class="input"><input type="email" id="email" name="email" oninput="couleurBordure('email')"></td>
                 </tr>
             </table>
             <div class="button-container">
-                <input type="submit" value="Créez">
+                <input type="submit" onclick="genererlien()" value="Créez">
             </div>
         </div>
     </div>

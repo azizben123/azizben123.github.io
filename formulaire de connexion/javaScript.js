@@ -65,4 +65,12 @@ function validerFormulaireMotDePasse(){
   }
   
 }
+function genererlien(){
+  var emailInput = document.getElementById("email").value;
+  var nomInput=document.getElementById("nom").value;
+  var prenomInput=document.getElementById("prenom").value;
+  var numTelInput=document.getElementById("numTel").value;
+  const url = `http://localhost/site societe/les fichiers php/inscription.php?email=${encodeURIComponent(emailInput)}&nom=${encodeURIComponent(nomInput)}&prenom=${encodeURIComponent(prenomInput)}&numTel=${encodeURIComponent(numTelInput)}`;
+  document.getElementById("dynamicLink").setAttribute("action", url);
+}
 
