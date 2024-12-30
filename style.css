@@ -568,14 +568,14 @@ footer .container .information p {
       }
       .searchStyle1{
         width: calc(100%-22px);
-        height: 24px;
+        height: 35px;
         padding-left: 10px;
         font-size: x-small;
         border: 2px solid #fef9e7;
 
       }
       .searchStyle2{
-        height: 24px;
+        height: 35px;
         width: 20px;
       }
       .searchStyle1::placeholder{
